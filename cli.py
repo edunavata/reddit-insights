@@ -1,14 +1,6 @@
 # cli.py
 
-from app.pipeline.runner import run_pipeline
-
-
-def main():
-    """
-    Entry point to execute the Reddit insights pipeline.
-    """
-    run_pipeline()
-
+from app.pipeline.runner import Pipeline
 
 if __name__ == "__main__":
-    main()
+    Pipeline.run_default()

@@ -42,12 +42,15 @@ def parse_analysis_response(response_text: str) -> Dict[str, Any]:
         if ":" in line:
             key, value = line.split(":", 1)
             clean_key = (
-                key.lower()
+                key.strip()
+                .lower()
                 .replace("*", "")
                 .replace("-", "")
                 .replace("_", " ")
+                .replace('"', "")
                 .strip()
                 .replace(" ", "_")
             )
-            result[clean_key] = value.strip(" *")
+            clean_value = value.strip(' ",')  # 👈 aquí limpiamos bien
+            result[clean_key] = clean_value
     return result
