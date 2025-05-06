@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "reddit-insights"
+version = "0.1.0"
+description = "Análisis de oportunidades de negocio a partir de posts de Reddit usando LLMs"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+praw = "^7.8.1"
+python-dotenv = "^1.1.0"
+openai = "^1.77.0"
+sqlalchemy = "^2.0.40"
+loguru = "^0.7.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+reddit-insights = "cli:main"
