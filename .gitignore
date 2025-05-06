@@ -1,0 +1,45 @@
+# Entornos virtuales
+venv/
+.env
+.env.*
+
+# Archivos de configuración sensibles
+*.env
+*.secret
+secrets.*
+
+# Bytecode de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de bases de datos temporales
+*.sqlite3
+*.db
+
+# Logs y salidas
+*.log
+logs/
+output/
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Pytest / coverage
+.cache/
+.pytest_cache/
+htmlcov/
+coverage.xml
+*.cover
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
